@@ -1,0 +1,20 @@
+<form class = "form--feed" ng-submit="fdFormCtrl.submitEndPoint()" ng-controller = "feedFormController as fdFormCtrl">
+	<div class='input-group'>
+    	<label class="label form-control" for="">User Name</label>
+		<input class="input-group-addon" type="text" ng-model = "fdFormCtrl.username">
+	</div>
+	<div class='input-group'>
+			<label class="label form-control" for="">Favorites</label>
+    		<input class="input-group-addon" type="radio" name="Favorites" value="loved" id="" ng-model = "fdFormCtrl.endpoint">
+	</div>
+    <div class='input-group'>
+    	    <label class="label form-control" for="">Recent</label>
+    		<input class="input-group-addon" type="radio" name="Recent" value="history" id="" ng-model = "fdFormCtrl.endpoint">
+    </div>
+
+    <input type="submit" value="Get Feed">
+    <h2>http://hypem.com/playlist/{{fdFormCtrl.endpoint}}/{{fdFormCtrl.username}}/json/1/data.js</h2>
+
+    
+
+</form>

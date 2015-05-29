@@ -1,0 +1,23 @@
+<div ng-controller="FeedCtrl as fc">
+	<ul>
+		<li class = "media media-items" ng-repeat = 'item in fc.items'>
+			<div class = "media-inner">
+			    <img ng-src = "{{item.thumb_url_large}}"/>
+				<h1>
+				{{item.title}}
+				 </h1>
+				BY
+				<h2>
+				 {{item.artist}}
+				</h2>
+				<span> <em>been loved</em></span>
+				<span><strong>{{item.loved_count}}</strong> times</span>
+				<p>{{item.description}}</p
+			</div>
+		</div>
+
+		</li>
+	
+	</ul>
+
+</div>

@@ -1,0 +1,41 @@
+<form ng-controller = "sortingForm as srtCtrl" ng-submit = " srtCtrl.sortingSubmit(data)">
+  <h4>{{srtCtrl.sorting.text}}</h4>
+
+  <input ng-model = "srtCtrl.sorting.text" type="radio" value="Loved Count"/>
+
+  <input ng-model = "srtCtrl.sorting.text" type="radio" value="Title"/>
+
+  <input ng-model = "srtCtrl.sorting.text" type="radio" value="Artist"/>
+
+  <input type="submit" value="Sort"/>
+
+</form>
+<div ng-controller = "MainCtrl" class="row">
+<!-- reverse of a php iterator -->
+  <div class="songs" >
+  <h1 ng-show = "isActive('loved_count')">Count</h1>
+  <ul ng-show = "isActive('loved_count')">
+    <li ng-repeat="song in data | orderBy:'-loved_count'">
+        {{song.title}} ----
+        {{song.artist}} -----
+        {{song.loved_count | number}} -----
+    </li>
+  </ul>
+  <h1 ng-show = "isActive('artist')">Artist</h1>
+    <ul ng-show = "isActive('artist')">
+    <li ng-repeat="song in data | orderBy:'artist'">
+        {{song.title}} ----
+        {{song.artist}} -----
+        {{song.loved_count | number}} -----
+    </li>
+  </ul>
+  <h1 ng-show = "isActive('title')">Title</h1>
+    <ul ng-show = "isActive('title')">
+    <li ng-repeat="song in data | orderBy:'title'">
+        {{song.title}} ----
+        {{song.artist}} -----
+        {{song.loved_count | number}} -----
+    </li>
+  </ul>
+  </div>
+</div>
