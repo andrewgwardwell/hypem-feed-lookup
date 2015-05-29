@@ -21,8 +21,8 @@ angular.module('myHypemApp')
 	var that = this,
 	un = $routeParams.username,
 	ep = $routeParams.endpoint;
-	this.endpoint = typeof ep != 'undefined' ? ep : 'loved';
-	this.username = typeof un != 'undefined' ? un : 'USERNAME';
+	this.endpoint = typeof ep !== 'undefined' ? ep : 'loved';
+	this.username = typeof un !== 'undefined' ? un : 'USERNAME';
 	
 	this.endpoint = 'loved';
 	this.submitEndPoint = function(){
