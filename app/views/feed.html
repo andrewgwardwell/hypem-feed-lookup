@@ -1,18 +1,32 @@
 <div ng-controller="FeedCtrl as fc">
-	<ul>
+    <form class = "display-form" ng-controller = "FeedDisplayController">
+    <label for="">Description</label>
+    	<input type="checkbox" name="Description" id="" ng-model = "description">
+    <label for="">Artist</label>
+    	<input type="checkbox" name="Artist" id="" ng-model = "artist">
+    <label for="">Title</label>
+    	<input type="checkbox" name="Title" id="" ng-model = "title">
+        <label for="">Loved Count</label>
+    	<input type="checkbox" name="Artist" id="" ng-model = "loved_count">
+    <label for="">Image</label>
+    	<input type="checkbox" name="Title" id="" ng-model = "image">
+    </form>
+	<ul class = "display-display">
 		<li class = "media media-items" ng-repeat = 'item in fc.items'>
 			<div class = "media-inner">
-			    <img ng-src = "{{item.thumb_url_large}}"/>
-				<h1>
+			    <img ng-show = "displayField('image')" ng-src = "{{item.thumb_url_large}}"/>
+				<h1 ng-show = "displayField('title')">
 				{{item.title}}
 				 </h1>
-				BY
-				<h2>
-				 {{item.artist}}
+ 				<h2 ng-show = "displayField('artist')">
+				 	BY {{item.artist}}
 				</h2>
+				<div ng-show = "displayField('loved_count')">
 				<span> <em>been loved</em></span>
 				<span><strong>{{item.loved_count}}</strong> times</span>
-				<p>{{item.description}}</p
+				</div>
+
+				<p ng-show = "displayField('description')">{{item.description}}</p
 			</div>
 		</div>
 

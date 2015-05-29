@@ -9,6 +9,7 @@
  */
 
 angular.module('myHypemApp')
+// custom directive
 .directive('feedForm', function(){
 	return {
         restrict: 'E',
@@ -18,13 +19,14 @@ angular.module('myHypemApp')
 	};
 })
 .controller('feedFormController', function($scope, $location, $routeParams){
+	
 	var that = this,
 	un = $routeParams.username,
 	ep = $routeParams.endpoint;
+	
 	this.endpoint = typeof ep !== 'undefined' ? ep : 'loved';
 	this.username = typeof un !== 'undefined' ? un : 'USERNAME';
 	
-	this.endpoint = 'loved';
 	this.submitEndPoint = function(){
         $location.path('/'+that.endpoint+'/'+that.username);
 	};
