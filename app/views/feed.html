@@ -2,10 +2,13 @@
     <feed-display-form></feed-display-form>
     <feed-category-form></feed-category-form>
 	<ul class = "display-display">
-		<li class = "media media-items" ng-repeat = 'item in fc.items'>
+		<li class = "media media-items" ng-repeat = 'item in fc.items | filter:search'>
 			<div class = "media-inner">
-			    <img ng-show = "displayField('image')" ng-src = "{{item.thumb_url_large}}"/>
-				<h1 ng-show = "displayField('title')">
+			    <div class="section section-left">
+			    	<img ng-show = "displayField('image')" ng-src = "{{item.thumb_url_large}}"/>
+			    </div>
+			    <div class="section section-right">
+			    		<h1 ng-show = "displayField('title')">
 				{{item.title}}
 				 </h1>
  				<h2 ng-show = "displayField('artist')">
@@ -16,7 +19,9 @@
 				<span><strong>{{item.loved_count}}</strong> times</span>
 				</div>
 
-				<p ng-show = "displayField('description')">{{item.description}}</p
+				<p ng-show = "displayField('description')">{{item.description}}</p>
+			    </div>
+			
 			</div>
 		</div>
 

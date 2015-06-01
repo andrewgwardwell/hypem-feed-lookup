@@ -58,10 +58,40 @@ form{
    
 }
 
+.display-form-search{
+  width: 50%;
+  float: left;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
 .display-display{
   width: 70%;
 }
 
+.section{
+  float: left;
+  h1{
+    margin-top: 0px;
+  }
+  img{
+    margin-top: 10px
+  }
+}
+
+.section-left{
+  width: 40%;
+  position: relative;
+  margin-right: 20px;
+  img{
+    max-width: 100%;
+  }
+}
+.section-right{
+  width: 50%;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
