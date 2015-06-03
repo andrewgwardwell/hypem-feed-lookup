@@ -29,7 +29,6 @@ angular
     $routeProvider
       .when('/:endpoint/:username', {
         templateUrl: 'views/feed.html',
-        controller: 'FeedCtrl'
       })
       .otherwise({
         redirectTo: '/'

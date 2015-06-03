@@ -19,6 +19,18 @@ form{
   background: white;
   padding: 10px;
 }
+.left,
+.right{
+  float: left;
+}
+
+.left{
+  width: 20%;
+}
+
+.right{
+  width: 70%;
+}
 
 .form--feed{
   height: 200px;
@@ -49,17 +61,17 @@ form{
 .display-form,
 .display-display{
   float: left;
+  widows: 100%;
+  margin-bottom: 20px;
 }
 
 .display-form{
-   width: 20%;
    border-radius: 20px;
    padding: 10px;
-   
 }
 
 .display-form-search{
-  width: 50%;
+  width: 100%;
   float: left;
   border-radius: 20px;
   padding: 10px;
@@ -68,7 +80,7 @@ form{
 }
 
 .display-display{
-  width: 70%;
+  width: 100%;
 }
 
 .section{

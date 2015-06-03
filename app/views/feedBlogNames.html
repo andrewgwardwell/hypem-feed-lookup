@@ -1,0 +1,7 @@
+
+	<form class="display-form">
+			<div class = "categories-item" ng-repeat="item in items | filter: {titles: searchTitles}">
+				<label for="">{{item.sitename}}</label>
+				<input ng-checked = 'scaleDownItems(e)' type="checkbox" checked value='{{item.sitename}}'></input>
+			</div>
+	</form>
